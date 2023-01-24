@@ -24,4 +24,24 @@ signup.addEventListener("click", () => {
 loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
   console.log(loginEmail.value);
+  fetch("https://interactive-login-2.onrender.com/api/auth/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: JSON.stringify({
+      email: loginEmail.value,
+      password: loginPassword.value,
+    }),
+  })
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      console.log(data);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
 });
