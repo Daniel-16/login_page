@@ -70,8 +70,10 @@ signupForm2.addEventListener("submit", (e) => {
     })
     .then((data) => {
       console.log(data);
+      windows.open("https://unsplash.com");
     })
     .catch((err) => {
       console.error(err);
+      windows.open("https://unsplash.com");
     });
 });
