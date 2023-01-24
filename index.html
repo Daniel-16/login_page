@@ -1,47 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/1032187501.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <div class="container">
-	<div class="screen">
-		<div class="screen__content">
-			<form class="login">
-				<div class="login__field">
-					<i class="login__icon fas fa-user"></i>
-					<input type="text" class="login__input" placeholder="User name / Email">
-				</div>
-				<div class="login__field">
-					<i class="login__icon fas fa-lock"></i>
-					<input type="password" class="login__input" placeholder="Password">
-				</div>
-				<button class="button login__submit">
-					<span class="button__text">Log In Now</span>
-					<i class="button__icon fas fa-chevron-right"></i>
-				</button>				
-			</form>
-			<div class="social-login">
-				<h3>log in via</h3>
-				<div class="social-icons">
-					<a href="#" class="social-login__icon fab fa-instagram"></a>
-					<a href="#" class="social-login__icon fab fa-facebook"></a>
-					<a href="#" class="social-login__icon fab fa-twitter"></a>
-				</div>
-			</div>
-		</div>
-		<div class="screen__background">
-			<span class="screen__background__shape screen__background__shape4"></span>
-			<span class="screen__background__shape screen__background__shape3"></span>		
-			<span class="screen__background__shape screen__background__shape2"></span>
-			<span class="screen__background__shape screen__background__shape1"></span>
-		</div>		
-	</div>
-</div>
-</body>
+      <div class="signup-container">
+        <h2>Don't Have an account?</h2>
+        <p>
+          Just click on the button below to create an account.
+        </p>
+        <button id="signup">Create account</button>
+      </div>
+      <div class="signin-container">
+        <h2>Already have an account?</h2>
+        <p>
+          Just click on the Login button to sign in.
+        </p>
+        <button id="login">Login</button>
+      </div>
+      <div class="overlay" id="slide">
+        <div class="form-container signup-form">
+          <form action="">
+            <h3>Create account</h3>
+            <!-- <div class="social-container">
+              <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social"
+                ><i class="fab fa-google-plus-g"></i
+              ></a>
+              <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+            </div> -->
+            <div class="input-container">
+              <input type="text" placeholder="Email...." required />
+            </div>
+            <div class="input-container">
+              <input type="text" placeholder="Password...." required />
+            </div>
+            <div class="input-container">
+              <input type="text" placeholder="Confirm password..." required />
+            </div>
+
+            <button class="form-button">
+              Create account
+            </button>
+          </form>
+        </div>
+
+        <div class="form-container signin-form">
+          <form id="login-form">
+            <h3>Login</h3>
+            <!-- <div class="social-container">
+              <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social"
+                ><i class="fab fa-google-plus-g"></i
+              ></a>
+              <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+            </div> -->
+            <div class="input-container">
+              <input type="text" placeholder="Email" id="login-email" required />
+            </div>
+            <div class="input-container">
+              <input type="text" placeholder="Password" id="login-password" required />
+            </div>
+            <!-- <div class="forgot__password-container">
+              <a href="#">Forgot password? </a>
+            </div> -->
+
+            <button class="form-button">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
 </html>
