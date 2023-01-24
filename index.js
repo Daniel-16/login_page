@@ -45,3 +45,33 @@ loginForm.addEventListener("submit", (e) => {
       console.error(err);
     });
 });
+
+const signupName = document.getElementById("signup-name");
+const signupEmail = document.getElementById("signup-email");
+const signupPassword = document.getElementById("signup-password");
+const signupForm2 = document.getElementById("signup-form");
+
+signupForm2.addEventListener("submit", (e) => {
+  e.preventDefault();
+  fetch("https://interactive-login-2.onrender.com/api/auth/signup", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: JSON.stringify({
+      fullname: signupName.value,
+      email: signupEmail.value,
+      password: signupPassword.value,
+    }),
+  })
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      console.log(data);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+});
